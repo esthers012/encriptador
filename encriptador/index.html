@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encriptador</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-panel">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <div class="center-panel">
+            <div class="textarea-container">
+                <textarea id="inputText" placeholder="Introduce tu texto aquí"></textarea>
+            </div>
+            <div class="button-container">
+                <div class="message-and-buttons">
+                    <p class="info-message">
+                        <img src="img/icon.png" class="info-icon" alt="Icono de advertencia"> 
+                        Solo letras minúsculas y sin acentos
+                    </p>
+                    <div class="buttons">
+                        <button id="encryptBtn">Encriptar</button>
+                        <button id="decryptBtn">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div id="outputText">
+                <img src="img/Muñeco.png" alt="Imagen de salida" id="placeholderImage">
+                <div class="labels">
+                    <label for="label1" class="label1">Ningún mensaje fue encontrado</label>
+                    <label for="label2" class="label2">Ingresa el texto que desees encriptar o desencriptar.</label>
+                </div>
+            </div>
+            <button id="copyBtn" class="buttons">Copiar</button>
+        </div>
+    </div>
+    <footer>
+        <p>Esther Alejo - 2024</p>
+    </footer>
+    <script src="encriptador.js"></script>
+</body>
+</html>

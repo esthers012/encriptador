@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    padding: 0 1.25rem;
+}
+
+.logo-panel {
+    display: flex;
+    width: 2rem;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    margin-left: 5.625rem;
+    margin-top: 3.125rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px; 
+    background-color: #f1f1f1; 
+    text-align: center;
+    line-height: 50px; 
+}
+
+.logo-panel img {
+    width: 2rem;
+    height: 3rem;
+}
+
+.center-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    margin-left: 2rem;
+    margin-right: 27.5rem;
+    height: 100%;
+    justify-content: center;
+}
+
+.textarea-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    margin-top: 6.25rem;
+}
+
+textarea {
+    width: 100%;
+    height: calc(85vh - 12.5rem);
+    padding: 0.625rem;
+    font-size: 2rem;
+    color: #0A3871;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    resize: none;
+    outline: none;
+}
+
+textarea::placeholder {
+    color: #0A3871;
+}
+
+.button-container {
+    display: flex;
+    align-items: flex-end;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.message-and-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.info-message {
+    font-size: 0.875rem;
+    color: #666;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    margin-left: 0.3125rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 20.5rem;
+    height: 4.1875rem;
+    border: 1px;
+    gap: 1.5rem;
+}
+
+#encryptBtn {
+    background-color: #0A3871;
+    color: white;
+}
+
+#decryptBtn {
+    background-color: #D8DFE8;
+    color: #0A3871;
+}
+
+.right-panel {
+    width: 25rem;
+    height: 85vh;
+    padding: 1.25rem;
+    border-radius: 2rem;
+    background-color: white;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 62.5rem;
+    margin-right: 2.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#outputText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    width: 100%;
+    height: auto;
+    padding: 0.625rem;
+    box-sizing: border-box;
+}
+
+#outputText img {
+    width: 21rem;
+    height: 19rem;
+    border-radius: 2rem;
+    object-fit: cover;
+    display: block;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.label1 {
+    font-size: 1.5rem;
+    color: #343A40;
+    font-weight: bold;
+}
+
+.label2 {
+    font-size: 1rem;
+    color: #495057;
+}
+
+#copyBtn {
+    display: none;
+    margin-top: 0.625rem;
+    background-color: transparent;
+    color: black;
+    padding: 0.625rem;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1.25rem;
+    width: calc(100% - 2.5rem);
+    border: 0.125rem solid #0A3871;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-panel {
+        order: -1;
+        margin: 0rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0rem;
+    }
+
+    .center-panel {
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .right-panel {
+        width: 100%;
+        margin: 1.25rem 0 0;
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    #outputText img {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .buttons {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .labels {
+        gap: 0.25rem;
+    }
+}
